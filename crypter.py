@@ -9,7 +9,7 @@ if crypt == "d":
     contents = f.read()
   f.close()
   decrypted = "".join([chr(int(binary, 2)) for binary in contents.split(" ")])
-  with open('decryptedfile.txt', 'w') as e:
+  with open('decryptedfile.binary', 'w') as e:
     e.write(decrypted)
   e.close()
 
@@ -20,6 +20,6 @@ elif crypt == "e":
     content = f.read()
   f.close()
   binaryencrypt = ' '.join(format(ord(x), 'b') for x in content) 
-  with open('cryptedfile.txt', 'w') as r:
+  with open('cryptedfile.binary', 'w') as r:
     r.write(binaryencrypt)
   r.close()
