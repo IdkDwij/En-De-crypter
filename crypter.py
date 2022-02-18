@@ -9,11 +9,9 @@ if crypt == "d":
     contents = f.read()
   f.close()
   decrypted = "".join([chr(int(binary, 2)) for binary in contents.split(" ")])
-  filething = input("would you like to store it inside a txt file y/n : ")
-  if filething == "y":
-    with open('decryptedfile.txt', 'w') as e:
-      e.write(decrypted)
-    e.close()
+  with open('decryptedfile.txt', 'w') as e:
+    e.write(decrypted)
+  e.close()
 
 elif crypt == "e":
   getfilepath = input("enter file path: ")
